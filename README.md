@@ -131,7 +131,7 @@ As a user, I want to
 
 
 ## sources used
-- 
+- https://guides.rubyonrails.org/getting_started.html
 
 ## post project reflections
 
