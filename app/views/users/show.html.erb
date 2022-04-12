@@ -1,0 +1,2 @@
+signed in as <%= current_user.email %>
+<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
