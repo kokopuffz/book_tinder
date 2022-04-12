@@ -1,33 +1,14 @@
 # README
 # Book Tinder
+Fun little app where you match with users with similar book tastes! 
 
 ## Project Idea
+As an former librarian, recommending books was one of my favorite parts of the job. I knew I wanted to build a book app and that's where I thought of book tinder. It's not meant to be a dating app, more of a... "hey! that person has similar tastes, let me see what else they enjoyed so I can read it" app. I hope this encourages more people to read. :3 
 
-How do you plan on learning/implementing this new technology?
-ruby on rails screencast, blogs, documentation
+## Project Goal
+"Rails is omakaze"
+I specifically chose to work on Ruby and Rails because of its doctrine(https://rubyonrails.org/doctrine). Using a stack that has been preassembled, will help me understand proper routings while also letting me spend more time on functionality. :)  I will be using ruby on rails screencast, blogs, documentation, and other lifelines to help me through this.  I will also add testing!
 
-
-What is your goal with this project?
-learn ruby, ruby on rails, how routes are implemented, testing method 
-mainly to have a wellrounded app 
-
-
-Who is the user for your app?
-someone who wants to find a new book to read, find someone who has similar book tastes, someone who wants to share good books to read 
-
-
-Any potential roadblocks you think you might run into?
-these are all new technologies for me, so all of them will be roadblocks! :D
-
-
-a description of the app
-
-
-wireframes of the app
-
-
-a description of the user flow for the app 
-signup -> login -> start swiping -> left, right, pass -> user can stop anytime and see the top people they match with -> user can continue to match books or click on the people they matched with -> if they click on another user they can see what books they matched, what books they didnt.
 
 d1 - project pitch, install rails, helloworld(proof of concept)
 d2 - signup/login, homepage, database migrations
@@ -35,16 +16,15 @@ d3 - deployment booklike/dislike
 d4 - other user pages, bootstrap
 d5 - seed
 
-additional links/images if they relate to the planning of your project, for example a rest API project will need ERDs of the data models and a RESTful routing chart of all the routes in the API
+
 
 ## User Stories
-As a user, I want to 
-As a user, I want to 
-As a user, I want to 
-As a user, I want to 
-As a user, I want to 
-As a user, I want to 
-As a user, I want to 
+As a user, I want to swipe left/right on books
+As a user, I want to see a fun interface to interact with
+As a user, I want to view all my top matches
+As a user, I want to match with other users who has similar book tastes 
+As a user, I want to view other user's page and see what we matched or didn't match in
+As a user, I want to find more books to read
 
 
 ## Approach
@@ -52,69 +32,60 @@ As a user, I want to
 
 
 ## MVP
-[x] 
-[x] 
-[x] 
-[x] 
-[x] 
-[x] 
-[x] 
+- [] working auth
+- [] create account
+- [] user can swipe left or right on books
+- [] user can see their matches
+- [] matches will be ordered by number of matched likes
+- [] user can see matched user's page
+- [] matched user's page shows books matched
+- [] matched user's page shows books unmatched
+- [] testing using rspec
+
 
 ## STRETCH GOALS
 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
+- [] add new books
+- [] follow/friend other users
+- [] add a top favorite books on user's profile
+- [] 
 
 
-## Server ROUTES
-
-| VERB | URL pattern | Action | Description |
-|------|-------------|--------|-------------|
-| GET  | / | Read   | show all events |
-| POST | /users/login | Read   | display login form |
-| POST | /users/register | Create  | display sign up form |
-| POST | /users/ | Create  | display sign up form |
-| GET  | /users/:id | Read  | display user profile |
-| PUT | /users/:id | Update | update User Profile |
-| PUT | /users/:id/upload | update  | update user's photo |
-| POST | /events | Create | create event|
-| GET  | /events/:id       | Read  | display event|
-| PUT | events/:id | Update | update event posting |
-| PUT | events/:id/upload | Update | update event photo |
-| DELETE | /events/:id | Delete | delete event |
-| DELETE | /events/:eventId/:userId/unattend | Delete | delete user off attendance list |
-| PUT | /events/:eventId/:userId/attend | Update | add user to attendance list |
-
-## Client ROUTING CHART
+## ROUTES
 
 | VERB | URL pattern | Action | Description |
 |------|-------------|--------|-------------|
-| GET  | / | Read   | show all events |
-| POST | /register        | Create  | user sign up page |
-| GET  | /login | Read  | check user |
-| Get | /profile | Read   | display user info |
-| POST | /events/new | Create | create event|
-| GET  | /events/:id       | Read  | display event detail|
-| PUT | event/:id | Update | update event posting |
-| DELETE | /event/:id | Delete | delete event |
+| GET  | / | Read   | show homepage |
+| GET | /users/sign_in | Read   | display signin/session form |
+| POST | /users/sign_in | Create  | create new session |
+| DELETE | /users/sign_out | Delete  | destroy current session |
+| GET | /users/password/new | Read  | show password form |
+| POST | /users/password/new | Create  | create new password |
+| GET | /users/sign_up | Read  | show new registration form |
+| Get | /users | Read  | users#show |
+| GET | / | Show  | home#index |
+| GET | /books | Show  | show all books |
+| GET | /books/:id | Read  | show book |
+| PATCH | /books/:id | Update  | edit book - left(pass)/right(like) |
+| GET | /books/right | Read  | show all books swiped right |
+| GET | /books/left | Read  | show all books swiped left |
+| POST | /book | Create  | add new book (stretch) |
 
 
 ## WIREFRAMES
-![wireframe](https://cdn.discordapp.com/attachments/919468128432455700/956715039669239869/Capture.JPG)
+![wireframe](https://cdn.discordapp.com/attachments/829614700815319060/963335257346703380/wireframes-flowchart.PNG)
 
 ## ERD
-![eventtable](https://cdn.discordapp.com/attachments/919468128432455700/956715040008966224/Capture2.JPG)
-![usertable](https://cdn.discordapp.com/attachments/919468128432455700/956715040273235998/Capture3.JPG)
+![Books, Users, Likes](https://cdn.discordapp.com/attachments/919468128432455700/956715040008966224/Capture2.JPG)
 
 
 ## tech used
 - Rails
 - Ruby 
 - Rspec(testing)
-- Devise (Authentication)
-- Seed data using Google Books API
+- Devise (authentication)
+- Seed book data using Google Books API
+- Seed some users?
 - Heroku (deployment)
 - Docker 
 - PostgreSQL
