@@ -19,12 +19,12 @@ d5 - seed
 
 
 ## User Stories
-As a user, I want to swipe left/right on books
-As a user, I want to see a fun interface to interact with
-As a user, I want to view all my top matches
-As a user, I want to match with other users who has similar book tastes 
-As a user, I want to view other user's page and see what we matched or didn't match in
-As a user, I want to find more books to read
+- As a user, I want to swipe left/right on books
+- As a user, I want to see a fun interface to interact with
+- As a user, I want to view all my top matches
+- As a user, I want to match with other users who has similar book tastes 
+- As a user, I want to view other user's page and see what we matched or didn't match in
+- As a user, I want to find more books to read
 
 
 ## Approach
@@ -76,7 +76,7 @@ As a user, I want to find more books to read
 ![wireframe](https://cdn.discordapp.com/attachments/829614700815319060/963335257346703380/wireframes-flowchart.PNG)
 
 ## ERD
-![Books, Users, Likes](https://cdn.discordapp.com/attachments/919468128432455700/956715040008966224/Capture2.JPG)
+![Books, Users, Likes](https://cdn.discordapp.com/attachments/829614700815319060/963324133721116692/erds.PNG)
 
 
 ## tech used
