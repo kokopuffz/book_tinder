@@ -1,3 +1,4 @@
+
 signed in as <%= current_user.email %>
 <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
 
@@ -5,7 +6,6 @@ signed in as <%= current_user.email %>
 <ul>
 <% @books.each do |book| %>
   <%= book.title %>
-  <%# <%= %> %>
 <% end %>
 </ul>
 
