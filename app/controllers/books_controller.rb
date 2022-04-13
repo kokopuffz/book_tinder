@@ -1,6 +1,17 @@
 class BooksController < ApplicationController
+  current_book = nil
   def show
     @book = Book.order('random()').limit(1).first
+    current_book = @book
+    p "current book:"
+    p current_book
+  end
+
+  def create
+    @user = current_user
+    @id = Book.find(current_book.id)
+    p @id
+
   end
 
   def matches
