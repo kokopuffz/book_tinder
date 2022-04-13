@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show'
   get '/books/', to: 'books#show'
   post '/books/:id/likes', to: 'likes#create', as: :likes
-  get '/books/matches', to: 'books#matches'
+  get '/matches', to: 'matches#index'
   # Defines the root path route ("/")
   root "home#index" 
 end
