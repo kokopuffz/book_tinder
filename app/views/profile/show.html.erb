@@ -2,13 +2,19 @@
 signed in as <%= current_user.email %>
 <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
 
-<h1>books</h1>
+<h1>liked books</h1>
 <ul>
 <% @books.each do |book| %>
   <%= book.title %>
 <% end %>
 </ul>
 
+<h1>disliked books</h1>
+<ul>
+  <% @disliked.each do |dbook| %>
+    <%= dbook.title %>
+    <% end %>
+</ul>
 <!--
   This example requires Tailwind CSS v2.0+ 
   
