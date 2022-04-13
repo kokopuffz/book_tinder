@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  current_book = nil
+  before_action :authenticate_user!
   def show
     @book = Book.order('random()').limit(1).first
     current_book = @book
@@ -7,12 +7,27 @@ class BooksController < ApplicationController
     p current_book
   end
 
-  def create
-    @user = current_user
-    @id = Book.find(current_book.id)
-    p @id
+  # create a like on book
+  # def create
+  #   like = Like.find_or_create_by(
+  #     user_id: current_user.id,
+  #     book_id: params["id"],
+  #   )
+  #   like.like = params["like"] == "true"
+  #   like.save()
 
-  end
+  #   redirect_to books_path()
+  # end
+  # def create_dislike
+  #   like = Like.find_or_create_by(
+  #     user_id: current_user.id,
+  #     book_id: params["id"],
+  #   )
+  #   like.like = params["like"] == "true"
+  #   like.save()
+
+  #   redirect_to books_path()
+  # end
 
   def matches
     #get array of all books liked by users currentuser = [1,2,3,4,7]

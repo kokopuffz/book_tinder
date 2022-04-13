@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get '/profile', to: 'profile#show'
   get '/users/:id', to: 'users#show'
   get '/books/', to: 'books#show'
-  "/books/:id/likes"
+  post '/books/:id/likes', to: 'likes#create', as: :likes
   get '/books/matches', to: 'books#matches'
   # Defines the root path route ("/")
-  root "home#index"
+  root "home#index" 
 end
