@@ -44,3 +44,9 @@
   </div>
 </div>
 <%# <%= render "devise/shared/links" %> %>
+
+
+ <%= devise_error_messages! %>
+    <% flash.each do |key, value| %>
+       <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
