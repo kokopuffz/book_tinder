@@ -1,6 +1,10 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!
   def show
     @book = Book.order('random()').limit(1).first
+    current_book = @book
+    p "current book:"
+    p current_book
   end
 
   def matches
