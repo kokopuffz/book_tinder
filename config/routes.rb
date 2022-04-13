@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # controller#action
   get '/profile', to: 'profile#show'
   get '/users/:id', to: 'users#show'
-  # get '/users/books', to: ''
+  get '/books/', to: 'books#show'
   # Defines the root path route ("/")
   root "home#index"
 end
