@@ -1,1 +1,18 @@
 <h1>HERRO FWENDS</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of matches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @matches.each do |match| %>
+    <tr>
+      <td><%= match[:email] %></td>
+      <td><%= match[:number_of_matches] %></td>
+      <td><%= link_to "see profile", user_path(match[:id]) %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
