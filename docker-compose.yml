@@ -1,0 +1,17 @@
+version: "3"
+services:
+  database:
+    image: postgres
+    environment:
+      - POSTGRES_USER=booktinder
+      - POSTGRES_PASSWORD=booktinder
+    networks:
+      - booktinder
+    ports:
+      - 15432:5432
+    volumes:
+      - booktinder-db-data:/var/lib/postgresql/data
+networks:
+  booktinder:
+volumes:
+  booktinder-db-data:
