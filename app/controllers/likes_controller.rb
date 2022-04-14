@@ -7,11 +7,13 @@ class LikesController < ApplicationController
       book_id: params["id"],
 
     )
+    p "LIKECONTROLLER"
+    p like
     like.like = params["like"] == "true"
     like.save()
 
-    like.like = params["dislike"] == "false"
-    like.save()
+    # like.like = params["like"] == "false"
+    # like.save()
     redirect_to books_path()
   end
 
