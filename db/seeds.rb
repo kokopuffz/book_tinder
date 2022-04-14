@@ -8,7 +8,7 @@
 Book.destroy_all
 User.destroy_all
 
-Book.create([
+books = Book.create([
   { title: 'Darth Bane: Path of Destruction', author: 'Drew Karpyshyn', image_url: 'https://images-na.ssl-images-amazon.com/images/I/919IhaKl1qL.jpg'},
 
   { title: 'Darth Bane: Rule of Two', author: 'Drew Karpyshyn', image_url: 'https://images-na.ssl-images-amazon.com/images/I/91Nsu5lwOkL.jpg'},
@@ -71,7 +71,7 @@ Book.create([
   { title: 'The Calculus 7', author: 'Louis Leithold', image_url: 'https://images-na.ssl-images-amazon.com/images/I/51uIz7K3SkL._SX395_BO1,204,203,200_.jpg'},
 ])
 
-User.create([
+users = User.create([
   { username: "randy", email: "randy@randy.com", password: "password",password_confirmation: "password"},
   { username: "wrath", email: "wrath@randy.com", password: "password",password_confirmation: "password"},
   { username: "yak", email: "yaak@randy.com", password: "password",password_confirmation: "password"},
@@ -87,7 +87,7 @@ User.create([
 ])
 
 Like.create([
-  { book_id: 1, user_id: 1, like: "True"},
+  { book_id: books[0].id, user_id: users[0].id, like: "True"},
   { book_id: 1, user_id: 2, like: "True"},
   { book_id: 1, user_id: 3, like: "True"},
   { book_id: 1, user_id: 4, like: "True"},
