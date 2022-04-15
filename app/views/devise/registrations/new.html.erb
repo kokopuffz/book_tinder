@@ -3,14 +3,13 @@
     <div class="min-h-full flex">
       <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div class="mx-auto w-full max-w-sm lg:w-96">
-          <div>
+          <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <img class="h-12 w-auto" src="https://freesvg.org/img/blackcat2.png" alt="cat icon">
             <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Sign up</h2>
             <p class="mt-2 text-sm text-gray-600">
               Or
               <%= link_to "sign in here if you already have an account", "/users/sign_in", class: "font-medium text-indigo-600 hover:text-indigo-500" %>
             </p>
-          </div>
           <div class="mt-8">
             <div>
               <div class="mt-6 relative">
@@ -40,6 +39,7 @@
                     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 " %>
                   </div>
                 </div>
+          </div>
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
                   </div>
