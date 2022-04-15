@@ -9,10 +9,8 @@ class UsersController < ApplicationController
   def show 
     @user = User.find(params[:id])  
     @books = @user.books.liked
-    p "BOOKS from usercontroller"
-    p @books
+    @disliked_books = @user.books.disliked
   end
-
   # show all disliked books
 
   # show top 5 users with matched books
