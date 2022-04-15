@@ -17,6 +17,7 @@ class MatchesController < ApplicationController
       {
         id: user.id,
         email: user.email,
+        name: user.name,
         number_of_matches: common_books_liked.count
       }
     end
