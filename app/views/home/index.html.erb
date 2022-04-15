@@ -18,7 +18,7 @@
         </div>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <% if user_signed_in? %>
-            <a>Welcome, <%= current_user.name.capitalize %>!</a>
+            <a>Welcome, <%= current_user.name.capitalize  %>!</a>
             <%= button_to "Sign out", destroy_user_session_path, method: :delete , class: "ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-red-400 bg-white hover:bg-rose-100" %>
           <% else %>
             <%= link_to "Login", new_user_session_path, class: "whites ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-red-400 bg-white hover:bg-rose-50 md:px-10" %>
