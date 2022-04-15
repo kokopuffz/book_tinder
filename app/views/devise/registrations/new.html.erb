@@ -27,6 +27,11 @@
                   </div>
                 </div>
                 <div class="space-y-1">
+                  <%= f.label :name, class:"block text-sm font-medium text-gray-700 mt-px" %>
+                  <div class="mt-1">
+                    <%= f.text_field :name, autocomplete: "name", class:"appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-400 focus:border-pink-500 sm:text-sm" %>
+                  </div>
+                <div class="space-y-1">
                   <%= f.label :password, class:"block text-sm font-medium text-gray-700 mt-px" %>
                   <div class="mt-1">
                     <% if @minimum_password_length %>
