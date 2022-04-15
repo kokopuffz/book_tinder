@@ -1,37 +1,27 @@
-
-signed in as <%= current_user.email %>
-<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-
-<h1>liked books</h1>
-<ul>
-<% @books.each do |book| %>
-  <%= book.title %>
-<% end %>
-</ul>
-
-<h1>disliked books</h1>
-<ul>
-  <% @disliked.each do |dbook| %>
-    <%= dbook.title %>
-    <% end %>
-</ul>
-
-signed in as <%= current_user.email %>
-<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-
-<h1> MYliked books</h1>
-
 <div class="bg-white">
   <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+    Hi <%= current_user.name.capitalize %>!
+    <h1>Here are the books you liked: </h1>
+    <ul>
+      <% @books.each do |book| %>
+        <% book.title %>
+      </ul>
+    <% end %>
     <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       <% @books.each do |book| %>
-      <a class="group">
-        <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-12">
-          <img src= <%= book.image_url %> alt=<%= book.title %> class="w-full h-full object-center object-cover group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700"><%= book.title %> </h3>
-      </a>
-     <% end %> 
+        <a class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-12">
+            <img src= <%= book.image_url %> alt=<%= book.title %> class="w-full h-full object-center object-cover group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700"><%= book.title %> </h3>
+        </a>
+      <% end %>
     </div>
+    <h1>Books you disliked:</h1>
+    <ul>
+      <% @disliked.each do |dbook| %>
+        <%= dbook.title %><br />
+      <% end %>
+    </ul>
   </div>
 </div>
