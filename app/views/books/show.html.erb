@@ -1,73 +1,54 @@
 <% if @book.nil? %>
   <h1>there are no other books to explore</h1>
 <% else %>
-  <h1>SHOW ONLY ONE BOOK HERRO</h1>
-  <h2>flip right or left</h2>
   <div class="bg-white">
     <main class="mt-8 max-w-2xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:auto-rows-min lg:gap-x-8">
         <div class="lg:col-start-4 lg:col-span-6">
           <div class="flex justify-between">
             <h1 class="text-xl font-medium text-gray-900"><%= @book.title %></h1>
-            <p class="text-xl font-medium text-gray-900">$35</p>
           </div>
-          <!-- Image gallery -->
           <div class="mt-8 lg:mt-0 lg:col-start-1 lg:col-span-7 lg:row-start-1 lg:row-span-3">
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+            <div display: flex;justify-content: center, class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
               <img src=<%= @book.image_url %> alt=<%= @book.title %> class="lg:col-span-2 lg:row-span-3  rounded-lg">
             </div>
           </div>
           <div class="mt-8 lg:col-span-5">
             <%= form_with url: likes_url(@book) do |f| %>
               <%= f.hidden_field :like, value: true %>
-              <%= f.submit "Like", class: "mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+              <%= f.submit "Read it!", class: "mt-8 w-full bg-red-400 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-rose-600 focus:outline-none focus:ring-2 border border-gray-400 rounded shadow focus:ring-offset-2 focus:ring-indigo-500" %>
             <% end %>
-            <%= form_with url: likes_url(@book) do |f| %>
-              <%= f.hidden_field :like, value: false %>
-              <%= f.submit "dislike", class: "mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
-            <% end %>
-            <%# <button type="submit" class="mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add to cart</button>
-          </form> %>
-            <!-- Product details -->
             <div class="mt-10">
-              <h2 class="text-sm font-medium text-gray-900">Description</h2>
+              <h2 class="text-sm font-medium text-gray-900"></h2>
               <div class="mt-4 prose prose-sm text-gray-500">
-                <p>The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewn locally, with a special dye technique that gives each tee it's own look.</p>
-                <p>Looking to stock your closet? The Basic tee also comes in a 3-pack or 5-pack at a bundle discount.</p>
+                <p></p>
+                <p></p>
               </div>
             </div>
-            <!-- Policies -->
-            <section aria-labelledby="policies-heading" class="mt-10">
-              <h2 id="policies-heading" class="sr-only">Our Policies</h2>
+            <section class="mt-10">
               <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
+                <%= form_with url: likes_url(@book) do |f| %>
+                  <%= f.hidden_field :like, value: false %>
+                  <div class="bg-gray-50 rounded-lg p-0 text-center border border-gray-400 rounded shadow">
+                    <%= f.submit "Leave it", class: "bg-gray-50 w-full rounded-lg p-6 text-center fill border border-gray-400 rounded shadow hover:bg-red-200" %>
+                  <% end %>
                   <dt>
-                    <!-- Heroicon name: outline/globe -->
-                    <svg class="mx-auto h-6 w-6 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span class="mt-4 text-sm font-medium text-gray-900"> International delivery </span>
                   </dt>
-                  <dd class="mt-1 text-sm text-gray-500">Get your order in 2 years</dd>
                 </div>
-                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
+
+                  <div style="display: flex;justify-content: center", class="display: flex, justify-content: centerbg-gray-50 rounded-lg p-0 text-center border border-gray-400 rounded shadow">
+                  
+                <%= link_to "Pass", "/books", class: "bg-gray-50 w-full rounded-lg p-6 text-center fill border border-gray-400 rounded shadow hover:bg-red-200" %>
                   <dt>
-                    <!-- Heroicon name: outline/currency-dollar -->
-                    <svg class="mx-auto h-6 w-6 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span class="mt-4 text-sm font-medium text-gray-900"> Loyalty rewards </span>
                   </dt>
-                  <dd class="mt-1 text-sm text-gray-500">Don&#039;t look at other tees</dd>
                 </div>
+
               </dl>
             </section>
           </div>
         </div>
       </div>
-    </section>
-  </div>
-</section>
-</main>
+    </div>
+  </main>
 </div>
 <% end %>
