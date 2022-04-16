@@ -69,20 +69,20 @@ books = Book.create([
 ])
 
 users = User.create([
-  { username: "randy", email: "randy@randy.com", password: "password", password_confirmation: "password"},
-  { username: "wrath", email: "wrath@randy.com", password: "password", password_confirmation: "password"},
-  { username: "yak", email: "yaak@randy.com", password: "password", password_confirmation: "password"},
-  { username: "patrick", email: "patrick@randy.com", password: " password",password_confirmation: "password"},
-  { username: "chan", email: "chan@randy.com", password: "password", password_confirmation: "password"},
-  { username: "cat", email: "cat@randy.com", password: "password" ,password_confirmation: "password"},
-  { username: "bombadil", email: "bombadil@randy.com", password: "password", password_confirmation: "password"},
-  { username: "zach", email: "zach@randy.com", password: "password", password_confirmation: "password"},
-  { username: "bryan", email: "bry@randy.com", password: "password", password_confirmation: "password"},
-  { username: "triston", email: "trist@randy.com", password: "password", password_confirmation: "password"},
-  { username: "justin", email: "zach@randy.com", password: "password", password_confirmation: "password"},
-  { username: "jon", email: "zach@randy.com", password: "password", password_confirmation: "password"},
-  { username: "camille", email: "cam@randy.com", password: "password", password_confirmation: "password"},
-  { username: "evan", email: "ev@randy.com", password: "password", password_confirmation: "password"},
+  { name: "randy", email: "randy@randy.com", password: "password", password_confirmation: "password"},
+  { name: "wrath", email: "wrath@randy.com", password: "password", password_confirmation: "password"},
+  { name: "yak", email: "yaak@randy.com", password: "password", password_confirmation: "password"},
+  { name: "patrick", email: "patrick@randy.com", password: " password",password_confirmation: "password"},
+  { name: "chan", email: "chan@randy.com", password: "password", password_confirmation: "password"},
+  { name: "cat", email: "cat@randy.com", password: "password" ,password_confirmation: "password"},
+  { name: "bombadil", email: "bombadil@randy.com", password: "password", password_confirmation: "password"},
+  { name: "zach", email: "zach@randy.com", password: "password", password_confirmation: "password"},
+  { name: "bryan", email: "bry@randy.com", password: "password", password_confirmation: "password"},
+  { name: "triston", email: "trist@randy.com", password: "password", password_confirmation: "password"},
+  { name: "justin", email: "zach@randy.com", password: "password", password_confirmation: "password"},
+  { name: "jon", email: "zach@randy.com", password: "password", password_confirmation: "password"},
+  { name: "camille", email: "cam@randy.com", password: "password", password_confirmation: "password"},
+  { name: "evan", email: "ev@randy.com", password: "password", password_confirmation: "password"},
 ])
 
 Like.create([
