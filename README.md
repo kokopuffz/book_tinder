@@ -7,7 +7,23 @@ As an former librarian, recommending books was one of my favorite parts of the j
 
 ## Project Goal
 "Rails is omakaze"
-I specifically chose to work on Ruby and Rails because of its doctrine(https://rubyonrails.org/doctrine). Using a stack that has been preassembled, will help me understand proper routings while also letting me spend more time on functionality. :)  I will be using ruby on rails screencast, blogs, documentation, and other lifelines to help me through this.  I will also add testing!
+I specifically chose to work on Ruby and Rails because of its doctrine(https://rubyonrails.org/doctrine). Using a stack that has been preassembled, will help me understand proper routings while also letting me spend more time on functionality. :)  I will be using ruby on rails screencast, blogs, documentation, and other lifelines to help me through this.  ~~I will also add testing~~
+
+## table of contents
+* [Project Idea](#project-idea)
+* [Project Goal](#project-goal)
+* [User Stories](#user-stories)
+* [Approach](#approach)
+* [MVP](#mvp)
+* [Routes](#routes)
+* [ERD](#erd)
+* [Wireframes](#wireframes)
+* [Tech used](#tech-used)
+* [Requirements](#requirements)
+* [Installation instructions](#installation-instructions)
+* [Sources used](#sources-used)
+* [Post project reflections](#post-project-reflections)
+* [Special thanks](#special-thanks)
 
  
 ## User Stories
@@ -20,6 +36,7 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 
 
 ## Approach
+My approach was to make the blog app many times
 
 
 
@@ -87,7 +104,7 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 ![matches](https://cdn.discordapp.com/attachments/829614700815319060/965471813624815636/mat.PNG)
 
 
-## tech used
+## Tech used
 - Rails
 - Ruby 
 - Devise (authentication)
@@ -149,7 +166,8 @@ Because our last project was on react, I kept trying to fit rails into react lik
 
 I had many goals for this project but learning a new framework and trying to remember ruby was a challenge. I practiced making rail's hello-world equivalent app, the blog  app https://guides.rubyonrails.org/getting_started.html. I thought it would a simple code along but because the structure was so different, making it once took a very long time! Overall, I really enjoyed ruby and rails. I loved the structure of rails, and when I needed help and I googled... I would find issues that were repeated and uniformed solutions!
 
-## special thanks :3 
+## special thanks 
+:3 
 - yaak!
 - taylor, weston, paulina, jason, april - best instructor/instructor aids i can ask for
 - BOMBADILS & BF crew
