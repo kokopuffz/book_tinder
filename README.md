@@ -39,6 +39,8 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 - [] add a top favorite books on user's profile
 - [] edit user profile
 - [] edit books liked/disliked
+- [x] user can pass on books
+- [] add googlebooks api
 
 
 ## ROUTES
@@ -59,22 +61,30 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 | POST | /books/:id/likes | Create  | create a like or dislike on book |
 | GET | /matches | Show  | show matches to user |
 
+## ERD
+![Books, Users, Likes](https://cdn.discordapp.com/attachments/829614700815319060/963324133721116692/erds.PNG)
 
 ## WIREFRAMES
 ![original wireframe](https://cdn.discordapp.com/attachments/829614700815319060/963335257346703380/wireframes-flowchart.PNG)
 
 
-**home page**
+**/home**
 ![home](https://cdn.discordapp.com/attachments/829614700815319060/965471502780747786/home.PNG)
-![signin](https://cdn.discordapp.com/attachments/829614700815319060/965471503594446848/si.PNG)
-![login](https://cdn.discordapp.com/attachments/829614700815319060/965471503858671656/su.PNG)
-![profile](https://cdn.discordapp.com/attachments/829614700815319060/965471503091118080/pro.PNG)
-![book-rating](https://cdn.discordapp.com/attachments/829614700815319060/965471503359569970/rate.PNG)
-![matches](https://cdn.discordapp.com/attachments/829614700815319060/965471813624815636/mat.PNG)
-![]()
 
-## ERD
-![Books, Users, Likes](https://cdn.discordapp.com/attachments/829614700815319060/963324133721116692/erds.PNG)
+**/users/sign_in**
+![signin](https://cdn.discordapp.com/attachments/829614700815319060/965471503594446848/si.PNG)
+
+**/users/log_in**
+![login](https://cdn.discordapp.com/attachments/829614700815319060/965471503858671656/su.PNG)
+
+**/profile**
+![profile](https://cdn.discordapp.com/attachments/829614700815319060/965471503091118080/pro.PNG)
+
+**/books**
+![book-rating](https://cdn.discordapp.com/attachments/829614700815319060/965471503359569970/rate.PNG)
+
+**/matches**
+![matches](https://cdn.discordapp.com/attachments/829614700815319060/965471813624815636/mat.PNG)
 
 
 ## tech used
@@ -84,18 +94,41 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 - Seed 
 - Heroku (deployment)
 - Docker 
+- SQLite
 - PostgreSQL
 - Tailwind
 
 ### other
 - miro - ERDS, wireframes
 
+## requirements
+* Ruby version
+  ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
+* Rails version
+  Rails 7.0.2.3
+* Github
+
 ## installation instructions
-
-1. 
-2. 
-3. 
-
+1. git clone
+```
+git@github.com:kokopuffz/book_tinder.git
+```
+2. run 
+```
+bundle install
+```
+3. migrate db and seed
+``` 
+rails db:migrate 
+rails db:migrate seed
+```
+4. start servers
+```
+bin/dev
+```
+5. go to localhost:3000
+6. admin access: localhost:3000/admin
+7. enjoy!
 
 
 ## sources used
@@ -107,11 +140,18 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 
 ## post project reflections
 
+VERSION ISSUES:
+I normally work on my PC but I had to go someplace so I took my mac. When I tried to work on the mac it wouldnt work so I updated and did something(forgot) to make it work.  And then, I went back on my PC and again had the same issue!  I was baffled and couldn't do anything for a little bit. The fix was I changed the gemfile and put in the working ruby version of each computer. 
 
-* Ruby version
-  ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
+THINKING OUTSIDE THE BOX:
+Because our last project was on react, I kept trying to fit rails into react like a puzzle and it wasn't connecting. My friend made a diagram for me about how react and rails work differently. 
+![rails react chart](https://cdn.discordapp.com/attachments/829614700815319060/963937884363177994/mentalmodel.PNG)
 
-* Rails version
-  Rails 7.0.2.3
+I had many goals for this project but learning a new framework and trying to remember ruby was a challenge. I practiced making rail's hello-world equivalent app, the blog  app https://guides.rubyonrails.org/getting_started.html. I thought it would a simple code along but because the structure was so different, making it once took a very long time! Overall, I really enjoyed ruby and rails. I loved the structure of rails, and when I needed help and I googled... I would find issues that were repeated and uniformed solutions!
 
+## special thanks :3 
+- yaak!
+- taylor, weston, paulina, jason, april - best instructor/instructor aids i can ask for
+- BOMBADILS & BF crew
+- springforward cohort! WE.DID.IT!
 
