@@ -6,6 +6,13 @@
     <main class="mt-8 max-w-2xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="lg:grid lg:grid-cols-12 lg:auto-rows-min lg:gap-x-8">
         <div class="lg:col-start-4 lg:col-span-6">
+          <div class="relative z-10 max-w-7xl mx-auto pl-0 pr-8 sm:px-0 lg:px-0">
+            <h1 class="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">Rate this book: </h1>
+            <p class="mt-6 text-xl text-warm-gray-500 max-w-3xl mb-6">Read it: if you read it, or want to read in the future.<br />
+              Leave it: if you didn't like it or don't want to read it<br />
+              Pass: if you're not sure and would like to rate at another time.<br />
+            </p>
+          </div>
           <div class="flex justify-between">
             <h1 class="text-xl font-medium text-gray-900"><%= @book.title %></h1>
           </div>
@@ -36,14 +43,11 @@
                   <dt>
                   </dt>
                 </div>
-
-                  <div style="display: flex;justify-content: center", class="display: flex, justify-content: centerbg-gray-50 rounded-lg p-0 text-center border border-gray-400 rounded shadow">
-                  
-                <%= link_to "Pass", "/books", class: "bg-gray-50 w-full rounded-lg p-6 text-center fill border border-gray-400 rounded shadow hover:bg-red-200" %>
+                <div style="display: flex;justify-content: center", class="display: flex, justify-content: centerbg-gray-50 rounded-lg p-0 text-center border border-gray-400 rounded shadow">
+                  <%= link_to "Pass", "/books", class: "bg-gray-50 w-full rounded-lg p-6 text-center fill border border-gray-400 rounded shadow hover:bg-blue-200" %>
                   <dt>
                   </dt>
                 </div>
-
               </dl>
             </section>
           </div>
