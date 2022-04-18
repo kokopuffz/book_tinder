@@ -21,7 +21,7 @@
             <tbody class="divide-y divide-gray-200 bg-white">
               <% @matches.each do |match| %>
                 <tr class="divide-x divide-gray-200">
-                  <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6"><%= match[:name].capitalize %></td>
+                  <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6"><%= (match[:name] || "").capitalize %></td>
                   <td class="whitespace-nowrap p-4 text-sm text-gray-500"><%= match[:number_of_matches] %></td>
                   <td class="whitespace-nowrap p-4 text-sm text-gray-500"><%= link_to "see profile", user_path(match[:id]) %></td>
                 <% end %>
