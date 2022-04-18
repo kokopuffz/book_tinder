@@ -1,6 +1,11 @@
-# README
 # Book Tinder
-Fun little app where you match with users with similar book tastes! 
+
+
+Fun little app where you match with users with similar book tastes!
+
+[![BookTinder](https://cdn.discordapp.com/attachments/829614700815319060/965532148041928724/asa.PNG)](https://book-tinder.herokuapp.com/)
+<h4 align="center"><a  href="https://book-tinder.herokuapp.com">Try BookTinder</a></h4>
+
 
 ## Project Idea
 As an former librarian, recommending books was one of my favorite parts of the job. I knew I wanted to build a book app and that's where I thought of book tinder. It's not meant to be a dating app, more of a... "hey! that person has similar tastes, let me see what else they enjoyed so I can read it" app. I hope this encourages more people to read. :3 
@@ -9,11 +14,10 @@ As an former librarian, recommending books was one of my favorite parts of the j
 "Rails is omakaze"
 I specifically chose to work on Ruby and Rails because of its doctrine(https://rubyonrails.org/doctrine). Using a stack that has been preassembled, will help me understand proper routings while also letting me spend more time on functionality. :)  I will be using ruby on rails screencast, blogs, documentation, and other lifelines to help me through this.  ~~I will also add testing~~
 
-## table of contents
+## Table of contents
 * [Project Idea](#project-idea)
 * [Project Goal](#project-goal)
 * [User Stories](#user-stories)
-* [Approach](#approach)
 * [MVP](#mvp)
 * [Routes](#routes)
 * [ERD](#erd)
@@ -33,11 +37,6 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 - As a user, I want to match with other users who has similar book tastes 
 - As a user, I want to view other user's page and see what we matched or didn't match in
 - As a user, I want to find more books to read
-
-
-## Approach
-My approach was to make the blog app many times
-
 
 
 ## MVP
