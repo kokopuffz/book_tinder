@@ -169,6 +169,6 @@ I had many goals for this project but learning a new framework and trying to rem
 :3 
 - yaak!
 - taylor, weston, paulina, jason, april - best instructor/instructor aids i can ask for
-- BOMBADILS & BF crew
+- BOMBADILS & BFG
 - springforward cohort! WE.DID.IT!
 
