@@ -113,6 +113,7 @@ I specifically chose to work on Ruby and Rails because of its doctrine(https://r
 - SQLite
 - PostgreSQL
 - Tailwind
+- Rails_admin
 
 ### other
 - miro - ERDS, wireframes
