@@ -7,7 +7,7 @@ class ProfileController < ApplicationController
     @user = current_user 
     @books = @user.books.liked
     @disliked = @user.books.disliked
-    flash.alert = "Hello " + @user.name.capitalize + "! "
+    flash.alert = "Hello " + (@user.name || @user.email).capitalize + "! "
   end
 
 end
